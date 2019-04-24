@@ -24,6 +24,7 @@
         "msg": "请求成功",
         "data": {
             "user_id": 1,
+            "username": "coco",
             "token": "6257f183356740409bba9ef731453b6b"
         }
     }
@@ -75,6 +76,7 @@
 #### 响应参数
 
     user_id 登陆用户的id值  int
+    username 登陆用户的用户名  str
     token 登陆标示符  str
     code 状态码  int
     msg  响应信息  str

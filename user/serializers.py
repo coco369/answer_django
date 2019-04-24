@@ -52,6 +52,7 @@ class LoginSerializer(serializers.Serializer):
         res_data = {
             'msg': '请求成功',
             'user_id': user.id,
+            'username': user.username,
             'token': token
         }
         return res_data
