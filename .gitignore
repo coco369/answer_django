@@ -106,3 +106,4 @@ venv.bak/
 .DS_Store
 
 answer_django/answer_django/lesou/settings.py
+answer_django/answer_django/logs

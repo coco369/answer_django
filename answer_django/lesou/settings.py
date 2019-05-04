@@ -185,7 +185,8 @@ CACHES = {
 
 # 日志配置
 
-LOG_PATH = '/home/logs/'
+# LOG_PATH = '/home/logs/'
+LOG_PATH = os.path.join(BASE_DIR, 'logs')
 
 LOGGING = {
     # 必须是1
