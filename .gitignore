@@ -10,7 +10,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -106,4 +105,4 @@ venv.bak/
 .DS_Store
 
 answer_django/answer_django/lesou/settings.py
-answer_django/answer_django/logs
+answer_django/answer_django/logs/
