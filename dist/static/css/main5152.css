@@ -897,7 +897,7 @@ input[type=text].error,
 /* Footer ------------------------------------------------------------------------------------------------------------*/
 #footer-wrapper {
   width: 100%;
-  background: url("../images/footer-bg.png");
+  background: url("../images/footer_bg.png");
 }
 #footer-wrapper > #footer {
   padding: 20px 35px;
