@@ -5,13 +5,14 @@ from rest_framework.response import Response
 from back.authentications import AuthAuthenticateClass
 from utils import error
 from web.models import Questions
-from back.serializers import BackQuestionsSerializer, QuestionsCreateSerializer
+from back.serializers import BackQuestionsSerializer, QuestionsCreateSerializer, QuestionsUpdateSerializer
 
 
 class QuestionsView(viewsets.GenericViewSet,
                     mixins.CreateModelMixin,
                     mixins.ListModelMixin,
-                    mixins.DestroyModelMixin):
+                    mixins.DestroyModelMixin,
+                    mixins.UpdateModelMixin):
 
     queryset = Questions.objects.filter(is_delete=0).all()
     serializer_class = BackQuestionsSerializer
@@ -32,4 +33,16 @@ class QuestionsView(viewsets.GenericViewSet,
         instance.save()
         serializers = BackQuestionsSerializer(instance)
         return Response(serializers.data)
+
+    def update(self, request, *args, **kwargs):
+        # 获取修改面试题对象
+        instance = self.get_object()
+        # 校验和序列化
+        serializers = QuestionsUpdateSerializer(data=request.data)
+        result = serializers.is_valid(raise_exception=False)
+        if not result:
+            raise error.ParamError({'code': 2001, 'msg': '面试题字段校验有误', 'error': serializers.errors})
+        data = serializers.update_questions(serializers.data, instance)
+        return Response(data)
+
 

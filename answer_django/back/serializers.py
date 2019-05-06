@@ -62,3 +62,39 @@ class QuestionsCreateSerializer(serializers.Serializer):
             'questions': BackQuestionsSerializer(questions).data
         }
         return res
+
+
+class QuestionsUpdateSerializer(serializers.Serializer):
+
+    title = serializers.CharField(max_length=100, min_length=2, required=True, error_messages={
+        'required': '问题标题必填',
+        'min_length': '标题不能短于2个字符',
+        'max_length': '标题不能长于100个字符',
+        'blank': '涉及技术栈必填'
+    })
+    answer = serializers.CharField(required=True, error_messages={
+        'required': '解答必填',
+        'blank': '涉及技术栈必填'
+    })
+    pri_key = serializers.CharField(max_length=100, required=True, error_messages={
+        'required': '面试题关键字必填',
+        'blank': '涉及技术栈必填'
+    })
+    from_company = serializers.CharField(max_length=100, required=False, error_messages={
+        'max_length': '标题不能长于100个字符'
+    })
+    is_show = serializers.IntegerField(required=False)
+
+    def update_questions(self, validate_data, instance):
+        # 修改面试题方法
+        instance.title = validate_data['title']
+        instance.answer = validate_data['pri_key']
+        instance.pri_key = validate_data['title']
+        instance.from_company = validate_data.get('from_company')
+        # is_show字段为非必填值，因此通过get方法获取
+        instance.is_show = validate_data.get('is_show', 1)
+        instance.save()
+        res = {
+            'questions': BackQuestionsSerializer(instance).data
+        }
+        return res
