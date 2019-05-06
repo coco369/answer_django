@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d18cc02-3478-4aae-80ee-685d146f588a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/answer_django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/answer_django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_django/lesou/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/answer_django/lesou/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer_django/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/answer_django/logs/log.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +42,6 @@
             <path>
               <item name="answer_django" type="b2602c69:ProjectViewProjectNode" />
               <item name="answer_django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="answer_django" type="b2602c69:ProjectViewProjectNode" />
-              <item name="answer_django" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
