@@ -12,7 +12,8 @@ class QuestionsView(viewsets.GenericViewSet,
                     mixins.CreateModelMixin,
                     mixins.ListModelMixin,
                     mixins.DestroyModelMixin,
-                    mixins.UpdateModelMixin):
+                    mixins.UpdateModelMixin,
+                    mixins.RetrieveModelMixin):
 
     queryset = Questions.objects.filter(is_delete=0).all()
     serializer_class = BackQuestionsSerializer

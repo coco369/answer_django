@@ -88,8 +88,8 @@ class QuestionsUpdateSerializer(serializers.Serializer):
     def update_questions(self, validate_data, instance):
         # 修改面试题方法
         instance.title = validate_data['title']
-        instance.answer = validate_data['pri_key']
-        instance.pri_key = validate_data['title']
+        instance.answer = validate_data['answer']
+        instance.pri_key = validate_data['pri_key']
         instance.from_company = validate_data.get('from_company')
         # is_show字段为非必填值，因此通过get方法获取
         instance.is_show = validate_data.get('is_show', 1)
