@@ -353,3 +353,168 @@
 20 utils.LogMiddleware 2019-05-15 11:46:17,541
 20 utils.LogMiddleware 2019-05-15 11:47:18,985
 20 utils.LogMiddleware 2019-05-15 11:49:04,215
+20 utils.LogMiddleware 2019-07-08 05:16:11,028
+20 utils.LogMiddleware 2019-07-08 05:16:11,030
+20 utils.LogMiddleware 2019-07-08 05:16:47,847
+20 utils.LogMiddleware 2019-07-08 05:16:49,677
+20 utils.LogMiddleware 2019-07-08 05:16:53,413
+20 utils.LogMiddleware 2019-07-08 05:17:08,593
+20 utils.LogMiddleware 2019-07-08 05:18:30,832
+20 utils.LogMiddleware 2019-07-08 05:18:33,247
+20 utils.LogMiddleware 2019-07-08 05:18:37,646
+20 utils.LogMiddleware 2019-07-08 05:18:39,072
+20 utils.LogMiddleware 2019-07-08 05:18:52,686
+20 utils.LogMiddleware 2019-07-08 05:18:55,267
+20 utils.LogMiddleware 2019-07-08 05:22:03,989
+20 utils.LogMiddleware 2019-07-08 05:23:17,739
+20 utils.LogMiddleware 2019-07-08 05:24:48,282
+20 utils.LogMiddleware 2019-07-08 05:24:52,863
+20 utils.LogMiddleware 2019-07-08 05:24:53,816
+20 utils.LogMiddleware 2019-07-08 05:24:56,749
+20 utils.LogMiddleware 2019-07-08 05:24:57,078
+20 utils.LogMiddleware 2019-07-08 05:25:02,543
+20 utils.LogMiddleware 2019-07-08 05:25:02,731
+20 utils.LogMiddleware 2019-07-08 05:27:40,879
+20 utils.LogMiddleware 2019-07-08 05:27:44,038
+20 utils.LogMiddleware 2019-07-08 05:27:47,884
+20 utils.LogMiddleware 2019-07-08 05:29:57,978
+20 utils.LogMiddleware 2019-07-08 05:29:58,025
+20 utils.LogMiddleware 2019-07-08 05:30:10,822
+20 utils.LogMiddleware 2019-07-08 05:30:10,823
+20 utils.LogMiddleware 2019-07-08 05:30:12,801
+20 utils.LogMiddleware 2019-07-08 05:30:45,538
+20 utils.LogMiddleware 2019-07-08 05:30:45,538
+20 utils.LogMiddleware 2019-07-08 05:30:49,160
+20 utils.LogMiddleware 2019-07-08 05:30:51,740
+20 utils.LogMiddleware 2019-07-08 05:31:20,755
+20 utils.LogMiddleware 2019-07-08 05:31:24,068
+20 utils.LogMiddleware 2019-07-08 05:31:27,684
+20 utils.LogMiddleware 2019-07-08 05:31:33,836
+20 utils.LogMiddleware 2019-07-08 05:31:33,883
+20 utils.LogMiddleware 2019-07-08 05:31:45,014
+20 utils.LogMiddleware 2019-07-08 05:31:49,630
+20 utils.LogMiddleware 2019-07-08 05:31:53,012
+20 utils.LogMiddleware 2019-07-08 05:32:28,464
+20 utils.LogMiddleware 2019-07-08 05:32:31,083
+20 utils.LogMiddleware 2019-07-08 05:32:34,084
+20 utils.LogMiddleware 2019-07-08 05:32:34,174
+40 django.request 2019-07-08 05:33:21,704
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '65432' for key 'title'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/back/views.py", line 28, in create
+    data = serializers.create_questions(serializers.data, request.user)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/back/serializers.py", line 60, in create_questions
+    user=user)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '65432' for key 'title'")
+20 utils.LogMiddleware 2019-07-08 05:33:21,813
+20 utils.LogMiddleware 2019-07-08 05:33:30,881
+20 utils.LogMiddleware 2019-07-08 05:33:33,095
+20 utils.LogMiddleware 2019-07-08 05:33:56,074
+20 utils.LogMiddleware 2019-07-08 05:33:58,326
+20 utils.LogMiddleware 2019-07-08 05:34:45,429
+20 utils.LogMiddleware 2019-07-08 05:34:47,504
+20 utils.LogMiddleware 2019-07-08 05:36:14,951
+20 utils.LogMiddleware 2019-07-08 05:36:16,773
+20 utils.LogMiddleware 2019-07-08 05:36:30,552
+20 utils.LogMiddleware 2019-07-08 05:36:41,865
+20 utils.LogMiddleware 2019-07-08 05:37:00,488
+20 utils.LogMiddleware 2019-07-08 05:37:11,771
+20 utils.LogMiddleware 2019-07-08 05:37:16,163
+20 utils.LogMiddleware 2019-07-08 05:37:25,919
+20 utils.LogMiddleware 2019-07-08 05:37:33,487
+20 utils.LogMiddleware 2019-07-08 05:38:09,248
+20 utils.LogMiddleware 2019-07-08 05:38:14,688
+20 utils.LogMiddleware 2019-07-08 05:39:20,218
+20 utils.LogMiddleware 2019-07-08 05:39:20,486
+20 utils.LogMiddleware 2019-07-08 05:40:31,225
+20 utils.LogMiddleware 2019-07-08 05:40:32,439
+20 utils.LogMiddleware 2019-07-08 05:40:35,937
+20 utils.LogMiddleware 2019-07-08 05:40:36,489
+20 utils.LogMiddleware 2019-07-08 05:40:41,769
+20 utils.LogMiddleware 2019-07-08 05:40:42,154

@@ -47,9 +47,9 @@ class QuestionsCreateSerializer(serializers.Serializer):
     def create_questions(self, validate_data, user):
         # 创建面试题方法
         title = validate_data['title']
-        answer = validate_data['pri_key']
-        pri_key = validate_data['title']
-        # 由于
+        answer = validate_data['answer']
+        pri_key = validate_data['pri_key']
+        # 公司
         from_company = validate_data.get('from_company')
         # is_show字段为非必填值，因此通过get方法获取
         is_show = validate_data.get('is_show', 1)
