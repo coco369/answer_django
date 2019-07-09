@@ -518,3 +518,326 @@ django.db.utils.IntegrityError: (1062, "Duplicate entry '65432' for key 'title'"
 20 utils.LogMiddleware 2019-07-08 05:40:36,489
 20 utils.LogMiddleware 2019-07-08 05:40:41,769
 20 utils.LogMiddleware 2019-07-08 05:40:42,154
+20 utils.LogMiddleware 2019-07-09 04:19:54,918
+20 utils.LogMiddleware 2019-07-09 04:19:54,922
+20 utils.LogMiddleware 2019-07-09 04:20:00,752
+30 django.request 2019-07-09 04:20:00,752
+40 django.request 2019-07-09 04:20:24,961
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 04:20:24,991
+20 utils.LogMiddleware 2019-07-09 04:20:38,058
+40 django.request 2019-07-09 04:20:43,215
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 04:20:43,228
+40 django.request 2019-07-09 04:20:47,418
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 04:20:47,431
+20 utils.LogMiddleware 2019-07-09 04:21:28,322
+20 utils.LogMiddleware 2019-07-09 04:21:33,768
+20 utils.LogMiddleware 2019-07-09 04:21:34,543
+40 django.request 2019-07-09 04:21:40,302
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 04:21:40,313
+20 utils.LogMiddleware 2019-07-09 04:31:25,354
+20 utils.LogMiddleware 2019-07-09 04:31:28,922
+20 utils.LogMiddleware 2019-07-09 05:07:44,140
+20 utils.LogMiddleware 2019-07-09 05:07:45,648
+20 utils.LogMiddleware 2019-07-09 05:08:56,619
+20 utils.LogMiddleware 2019-07-09 05:09:19,794
+40 django.request 2019-07-09 05:09:25,717
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 05:09:25,766
+40 django.request 2019-07-09 05:10:15,870
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 67, in set
+    return self.client.set(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 149, in set
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/views.py", line 29, in login
+    data = serializer.login_data(serializer.data)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/serializers.py", line 50, in login_data
+    cache.set(token, user.id, timeout=60 * 60 * 7 * 24)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/cache.py", line 39, in _decorator
+    raise e.parent
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django_redis/client/default.py", line 143, in set
+    return client.set(nkey, nvalue, nx=nx, px=timeout, xx=xx)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 1171, in set
+    return self.execute_command('SET', *pieces)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 668, in execute_command
+    return self.parse_response(connection, command_name, **options)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/client.py", line 680, in parse_response
+    response = connection.read_response()
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/redis/connection.py", line 629, in read_response
+    raise response
+redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+20 utils.LogMiddleware 2019-07-09 05:10:15,941
+20 utils.LogMiddleware 2019-07-09 05:29:28,071
+20 utils.LogMiddleware 2019-07-09 05:29:31,249
+20 utils.LogMiddleware 2019-07-09 05:30:23,118
+20 utils.LogMiddleware 2019-07-09 05:30:24,412
+20 utils.LogMiddleware 2019-07-09 05:31:40,620
+20 utils.LogMiddleware 2019-07-09 05:31:40,624
+20 utils.LogMiddleware 2019-07-09 05:31:40,644
+20 utils.LogMiddleware 2019-07-09 05:32:17,854
+20 utils.LogMiddleware 2019-07-09 05:32:17,863
+20 utils.LogMiddleware 2019-07-09 05:32:17,885
+20 utils.LogMiddleware 2019-07-09 05:32:58,072
+20 utils.LogMiddleware 2019-07-09 10:16:35,249
+20 utils.LogMiddleware 2019-07-09 10:16:46,348
+20 utils.LogMiddleware 2019-07-09 10:16:53,854
+20 utils.LogMiddleware 2019-07-09 10:16:55,208
+20 utils.LogMiddleware 2019-07-09 10:17:01,889
+20 utils.LogMiddleware 2019-07-09 10:17:07,318
+20 utils.LogMiddleware 2019-07-09 10:17:08,721
+20 utils.LogMiddleware 2019-07-09 15:14:33,371
+20 utils.LogMiddleware 2019-07-09 15:14:49,593
+20 utils.LogMiddleware 2019-07-09 15:14:52,051
+20 utils.LogMiddleware 2019-07-09 15:15:34,424
+20 utils.LogMiddleware 2019-07-09 15:16:54,431
+20 utils.LogMiddleware 2019-07-09 15:17:00,424
+20 utils.LogMiddleware 2019-07-09 15:17:04,528
+20 utils.LogMiddleware 2019-07-09 15:17:06,726
+20 utils.LogMiddleware 2019-07-09 15:17:26,270

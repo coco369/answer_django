@@ -4,7 +4,7 @@ from rest_framework.decorators import list_route
 from rest_framework.response import Response
 
 from user.models import User
-from user.serializers import UserSerializer, LoginSerializer, RegisterSerializer
+from user.serializers import UserSerializer, LoginSerializer, RegisterSerializer, ResetPasswordSerializer
 from utils import error
 
 
@@ -45,3 +45,21 @@ class UserView(viewsets.GenericViewSet,
         # 实现注册
         data = serializer.register_data(serializer.data)
         return Response(data)
+
+    @list_route(methods=['POST'], serializer_class=ResetPasswordSerializer)
+    def reset_password(self, request):
+        """
+        重置密码
+        """
+        serializer = self.get_serializer(data=request.data)
+        result = serializer.is_valid(raise_exception=False)
+        if not result:
+            errors = serializer.errors
+            data = {'code': 1007, 'msg': '重置密码不成功', 'error': errors}
+            raise error.ParamError(data)
+        # 实现重置
+        serializer.reset(serializer.data)
+        res = {
+            'msg': '重置密码成功'
+        }
+        return Response(res)

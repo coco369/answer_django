@@ -99,3 +99,43 @@ class RegisterSerializer(serializers.Serializer):
             'user_id': user.id
         }
         return res_data
+
+
+class ResetPasswordSerializer(serializers.Serializer):
+    # 登录序列化
+    username = serializers.CharField(required=True, max_length=4, min_length=2, error_messages={
+        'required': '用户名必填',
+        'max_length': '用户名不能超过4字符',
+        'min_length': '用户名不能短于2字符'
+    })
+    password = serializers.CharField(required=True, min_length=6, max_length=20, error_messages={
+        'required': '密码必填',
+        'max_length': '密码不能超过20字符',
+        'min_length': '密码不能短于6字符'
+    })
+    password2 = serializers.CharField(required=True, min_length=6, max_length=20, error_messages={
+        'required': '重设密码必填',
+        'max_length': '重设密码不能超过20字符',
+        'min_length': '重设密码不能短于6字符'
+    })
+
+    def validate(self, attrs):
+        # 校验重设密码的账号是否存在，密码是否正确
+        username = attrs.get('username')
+        password = attrs.get('password')
+        # 判断如果账号不存在则抛出错误提示
+        if not User.objects.filter(username=username).exists():
+            raise error.ParamError({'code': 1005, 'msg': '重设密码账号不存在，请更换账号'})
+        # 判断密码和用户密码是否一致
+        user = User.objects.filter(username=username).first()
+        if not check_password(password, user.password):
+            raise error.ParamError({'code': 1006, 'msg': '原始密码错误，请确认登陆密码是否正确'})
+        # 返回校验的参数
+        return attrs
+
+    def reset(self, validate_data):
+        # 重设密码操作
+        u_password = make_password(validate_data['password2'])
+        user = User.objects.filter(username=validate_data['username']).first()
+        user.password = u_password
+        user.save()
