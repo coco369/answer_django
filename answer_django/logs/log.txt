@@ -919,3 +919,50 @@ redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshot
 20 utils.LogMiddleware 2019-07-13 06:18:31,871
 20 utils.LogMiddleware 2019-07-13 06:27:51,094
 20 utils.LogMiddleware 2019-07-13 06:27:51,098
+20 utils.LogMiddleware 2019-07-13 06:46:46,775
+20 utils.LogMiddleware 2019-07-13 06:46:58,237
+20 utils.LogMiddleware 2019-07-13 06:46:58,242
+20 utils.LogMiddleware 2019-07-13 06:51:02,250
+20 utils.LogMiddleware 2019-07-13 06:51:23,679
+40 django.request 2019-07-13 06:51:36,211
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: count() takes 1 positional argument but 2 were given
+20 utils.LogMiddleware 2019-07-13 06:51:36,255
+40 django.request 2019-07-13 06:52:17,362
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: count() takes 1 positional argument but 2 were given
+20 utils.LogMiddleware 2019-07-13 06:52:17,375
+20 utils.LogMiddleware 2019-07-13 06:52:31,434
+20 utils.LogMiddleware 2019-07-13 06:54:15,610

@@ -1,5 +1,6 @@
 
 from rest_framework import viewsets, mixins
+from rest_framework.decorators import list_route
 from rest_framework.response import Response
 
 from back.authentications import AuthAuthenticateClass
@@ -46,4 +47,14 @@ class QuestionsView(viewsets.GenericViewSet,
         data = serializers.update_questions(serializers.data, instance)
         return Response(data)
 
+    @list_route(methods=['GET'])
+    def count(self, request):
+        """
+        统计当前发布的面试题的数量
+        """
+        q_counts = self.queryset.count()
+        res = {
+            'count': q_counts
+        }
+        return Response(res)
 
