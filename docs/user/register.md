@@ -1,9 +1,9 @@
 
-### 用户登陆接口
+### 用户注册接口
 
 ***
 
-#### 请求地址: /api/user/user/login/
+#### 请求地址: /api/user/user/register/
 
 #### 请求方式：POST
 
@@ -12,6 +12,8 @@
     username 用户名 str 必填
     
     password 密码 str  必填
+    
+    password2 确认密码 str  必填
     
 *** 
 
@@ -24,8 +26,6 @@
         "msg": "请求成功",
         "data": {
             "user_id": 1,
-            "username": "coco",
-            "token": "6257f183356740409bba9ef731453b6b"
         }
     }
     
@@ -43,6 +43,9 @@
                 ],
                 "password": [
                     "密码必填"
+                ],
+                "password2": [
+                    "确认密码必填"
                 ]
             }
         }
@@ -60,26 +63,36 @@
                 ],
                 "password": [
                     "密码不能短于6字符"
+                ],
+                "password2": [
+                    "密码不能短于6字符"
                 ]
             }
         }
     }
     
-3.账号和密码的输入符合规范，但账号不存在的情况
+3.账号和密码的输入符合规范，账号已存在的情况和密码以及确认密码不一致的情况
 
     {
-        "code": 1001,
-        "msg": "登录账号不存在，请更换账号再登录",
+        "code": 1003,
+        "msg": "注册账号已存在，请更换账号",
         "data": {}
     }
+    
+    {
+        "code": 1004,
+        "msg": "注册密码和确认密码不一致",
+        "data": {}
+    }
+    
+    
     
 #### 响应参数
 
     user_id 登陆用户的id值  int
-    username 登陆用户的用户名  str
-    token 登陆标示符  str
     code 状态码  int
     msg  响应信息  str
     username  账号错误信息  str
     password  密码错误信息  str
+    password2  确认密码错误信息  str
     
