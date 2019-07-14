@@ -1,5 +1,5 @@
 .DS_Store
-answer_django/lesou/settings.py
-answer_django/logs/
-.idea/
-__pycache__/
+/answer_django/lesou/settings.py
+*.log
+/.idea
+/__pycache__
