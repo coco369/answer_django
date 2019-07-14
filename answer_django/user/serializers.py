@@ -1,11 +1,12 @@
 
 import uuid
+from datetime import datetime, timedelta
 
 from django.contrib.auth.hashers import make_password, check_password
 from rest_framework import serializers
 from django.core.cache import cache
 
-from user.models import User
+from user.models import User, UserLogin
 from utils import error
 
 
@@ -139,3 +140,19 @@ class ResetPasswordSerializer(serializers.Serializer):
         user = User.objects.filter(username=validate_data['username']).first()
         user.password = u_password
         user.save()
+
+
+class UserLoginSerializer(serializers.ModelSerializer):
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['status'] = '成功' if data['status'] == 'SUCCESS' else '失败'
+        # 修改时间，默认时间为UTC时间
+        utctime = datetime.strptime(data['create_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
+        data['create_time'] = (utctime + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')
+
+        return data
+
+    class Meta:
+        model = UserLogin
+        fields = '__all__'

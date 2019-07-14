@@ -986,3 +986,207 @@ TypeError: count() takes 1 positional argument but 2 were given
 20 utils.LogMiddleware 2019-07-13 08:04:02,609
 20 utils.LogMiddleware 2019-07-13 08:04:04,524
 20 utils.LogMiddleware 2019-07-13 08:04:07,807
+20 utils.LogMiddleware 2019-07-13 08:16:22,004
+20 utils.LogMiddleware 2019-07-13 08:17:40,707
+20 utils.LogMiddleware 2019-07-13 08:17:43,311
+20 utils.LogMiddleware 2019-07-13 08:17:49,557
+20 utils.LogMiddleware 2019-07-13 08:17:53,605
+20 utils.LogMiddleware 2019-07-13 08:17:54,684
+20 utils.LogMiddleware 2019-07-13 08:17:57,147
+20 utils.LogMiddleware 2019-07-13 08:18:00,697
+20 utils.LogMiddleware 2019-07-13 08:18:04,793
+20 utils.LogMiddleware 2019-07-13 08:18:23,315
+20 utils.LogMiddleware 2019-07-13 08:18:25,936
+20 utils.LogMiddleware 2019-07-13 08:19:23,444
+40 django.request 2019-07-13 08:29:45,047
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/usermiddleware.py", line 14, in process_response
+    login_ip = request.meta.address_ip
+AttributeError: 'WSGIRequest' object has no attribute 'meta'
+20 utils.LogMiddleware 2019-07-13 08:29:45,096
+40 django.request 2019-07-13 08:34:45,809
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/UserMiddleware.py", line 14, in process_response
+    login_ip = request.meta.address_ip
+AttributeError: 'WSGIRequest' object has no attribute 'meta'
+20 utils.LogMiddleware 2019-07-13 08:34:45,846
+20 utils.LogMiddleware 2019-07-13 08:35:12,640
+20 utils.LogMiddleware 2019-07-13 08:35:13,596
+20 utils.LogMiddleware 2019-07-13 08:35:14,257
+20 utils.LogMiddleware 2019-07-13 08:35:15,131
+20 utils.LogMiddleware 2019-07-13 08:35:15,703
+20 utils.LogMiddleware 2019-07-13 08:35:23,465
+20 utils.LogMiddleware 2019-07-13 08:35:24,425
+20 utils.LogMiddleware 2019-07-13 08:35:27,687
+20 utils.LogMiddleware 2019-07-13 08:35:30,432
+20 utils.LogMiddleware 2019-07-13 08:35:31,432
+20 utils.LogMiddleware 2019-07-13 08:35:50,584
+20 utils.LogMiddleware 2019-07-13 08:36:18,660
+20 utils.LogMiddleware 2019-07-13 08:36:19,314
+20 utils.LogMiddleware 2019-07-13 08:36:31,274
+20 utils.LogMiddleware 2019-07-13 08:36:33,453
+20 utils.LogMiddleware 2019-07-13 08:39:34,484
+20 utils.LogMiddleware 2019-07-13 08:39:34,485
+20 utils.LogMiddleware 2019-07-13 08:40:07,924
+20 utils.LogMiddleware 2019-07-13 08:40:14,141
+20 utils.LogMiddleware 2019-07-13 08:40:14,145
+20 utils.LogMiddleware 2019-07-13 08:41:16,777
+20 utils.LogMiddleware 2019-07-13 08:41:20,078
+20 utils.LogMiddleware 2019-07-13 08:41:24,192
+20 utils.LogMiddleware 2019-07-13 08:41:26,038
+20 utils.LogMiddleware 2019-07-13 08:41:27,964
+20 utils.LogMiddleware 2019-07-13 08:41:30,541
+20 utils.LogMiddleware 2019-07-13 08:43:19,149
+20 utils.LogMiddleware 2019-07-13 08:48:21,603
+20 utils.LogMiddleware 2019-07-13 08:48:22,437
+40 django.request 2019-07-13 10:35:26,680
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/UserMiddleware.py", line 14, in process_response
+    login_ip = request.meta.address_ip
+AttributeError: 'WSGIRequest' object has no attribute 'meta'
+20 utils.LogMiddleware 2019-07-13 10:35:26,778
+20 utils.LogMiddleware 2019-07-13 10:43:46,351
+20 utils.LogMiddleware 2019-07-13 10:43:49,596
+20 utils.LogMiddleware 2019-07-13 10:43:49,606
+40 django.request 2019-07-13 10:44:05,824
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/UserMiddleware.py", line 18, in process_response
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+AttributeError: 'dict' object has no attribute 'has_key'
+20 utils.LogMiddleware 2019-07-13 10:44:05,975
+40 django.request 2019-07-13 10:45:07,909
+Traceback (most recent call last):
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/coco/env/lesouenv/lib/python3.7/site-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/Users/coco/my_wordspace/answer_django/answer_django/user/UserMiddleware.py", line 18, in process_response
+    if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+AttributeError: 'dict' object has no attribute 'has_key'
+20 utils.LogMiddleware 2019-07-13 10:45:08,316
+20 utils.LogMiddleware 2019-07-13 10:45:34,432
+20 utils.LogMiddleware 2019-07-13 10:47:33,255
+20 utils.LogMiddleware 2019-07-13 10:48:22,339
+20 utils.LogMiddleware 2019-07-13 10:50:08,741
+20 utils.LogMiddleware 2019-07-13 10:51:08,863
+20 utils.LogMiddleware 2019-07-13 10:51:38,613
+20 utils.LogMiddleware 2019-07-13 10:51:49,876
+20 utils.LogMiddleware 2019-07-13 10:51:49,932
+20 utils.LogMiddleware 2019-07-13 10:51:51,432
+20 utils.LogMiddleware 2019-07-13 11:05:37,312
+20 utils.LogMiddleware 2019-07-13 11:05:37,457
+20 utils.LogMiddleware 2019-07-13 11:06:56,882
+20 utils.LogMiddleware 2019-07-13 11:06:57,043
+20 utils.LogMiddleware 2019-07-13 11:07:17,897
+20 utils.LogMiddleware 2019-07-13 11:07:17,992
+20 utils.LogMiddleware 2019-07-13 11:07:54,544
+20 utils.LogMiddleware 2019-07-13 11:07:54,687
+20 utils.LogMiddleware 2019-07-13 11:08:39,035
+20 utils.LogMiddleware 2019-07-13 11:08:43,601
+20 utils.LogMiddleware 2019-07-13 11:08:43,686
+20 utils.LogMiddleware 2019-07-13 11:10:03,808
+20 utils.LogMiddleware 2019-07-13 11:10:03,960
+20 utils.LogMiddleware 2019-07-13 11:10:29,272
+20 utils.LogMiddleware 2019-07-13 11:14:43,355
+20 utils.LogMiddleware 2019-07-13 11:16:39,947
+20 utils.LogMiddleware 2019-07-13 11:16:40,086
+20 utils.LogMiddleware 2019-07-13 11:17:05,669
+20 utils.LogMiddleware 2019-07-13 11:17:24,743
+20 utils.LogMiddleware 2019-07-13 11:18:03,246
+20 utils.LogMiddleware 2019-07-13 11:18:10,839
+20 utils.LogMiddleware 2019-07-13 11:18:11,069
+20 utils.LogMiddleware 2019-07-13 11:19:02,888
+20 utils.LogMiddleware 2019-07-13 11:19:39,200
+20 utils.LogMiddleware 2019-07-13 11:19:53,780
+20 utils.LogMiddleware 2019-07-13 11:19:56,357
+20 utils.LogMiddleware 2019-07-13 11:20:18,468
+20 utils.LogMiddleware 2019-07-13 11:20:18,484
+20 utils.LogMiddleware 2019-07-13 11:22:38,735
+20 utils.LogMiddleware 2019-07-13 11:22:38,813
+20 utils.LogMiddleware 2019-07-13 11:23:21,707
+20 utils.LogMiddleware 2019-07-13 11:23:59,531
+20 utils.LogMiddleware 2019-07-13 11:24:53,436
+20 utils.LogMiddleware 2019-07-13 11:26:17,185
+20 utils.LogMiddleware 2019-07-13 11:26:17,201
+20 utils.LogMiddleware 2019-07-13 11:26:55,863
+20 utils.LogMiddleware 2019-07-13 11:26:55,979
+20 utils.LogMiddleware 2019-07-13 11:26:56,965
+20 utils.LogMiddleware 2019-07-13 11:26:56,986
+20 utils.LogMiddleware 2019-07-13 11:27:01,328
+20 utils.LogMiddleware 2019-07-13 11:27:01,343
+20 utils.LogMiddleware 2019-07-13 11:27:06,231
+20 utils.LogMiddleware 2019-07-13 11:27:06,339
+20 utils.LogMiddleware 2019-07-13 11:27:07,049
+20 utils.LogMiddleware 2019-07-13 11:27:07,065
+20 utils.LogMiddleware 2019-07-13 11:27:14,306
+20 utils.LogMiddleware 2019-07-13 11:27:18,899
+20 utils.LogMiddleware 2019-07-13 11:27:18,980
+20 utils.LogMiddleware 2019-07-13 11:27:18,998
+20 utils.LogMiddleware 2019-07-13 11:27:20,688
+20 utils.LogMiddleware 2019-07-13 11:27:20,769
+20 utils.LogMiddleware 2019-07-13 11:27:21,380
+20 utils.LogMiddleware 2019-07-13 11:27:21,398
+20 utils.LogMiddleware 2019-07-13 11:29:33,959
+20 utils.LogMiddleware 2019-07-13 11:29:33,972
+20 utils.LogMiddleware 2019-07-13 11:29:36,004
+20 utils.LogMiddleware 2019-07-13 11:29:36,103
+20 utils.LogMiddleware 2019-07-13 11:29:37,871
+20 utils.LogMiddleware 2019-07-13 11:29:37,887
+20 utils.LogMiddleware 2019-07-14 01:04:09,756
+20 utils.LogMiddleware 2019-07-14 01:04:09,831
+20 utils.LogMiddleware 2019-07-14 01:04:14,903
+20 utils.LogMiddleware 2019-07-14 01:04:16,245
+20 utils.LogMiddleware 2019-07-14 01:04:16,312
+20 utils.LogMiddleware 2019-07-14 01:04:18,796
+20 utils.LogMiddleware 2019-07-14 01:04:18,814
+20 utils.LogMiddleware 2019-07-14 01:07:03,923
+20 utils.LogMiddleware 2019-07-14 01:07:22,402
+20 utils.LogMiddleware 2019-07-14 01:07:22,477
+20 utils.LogMiddleware 2019-07-14 01:07:27,064
+20 utils.LogMiddleware 2019-07-14 01:07:27,081
+20 utils.LogMiddleware 2019-07-14 01:08:34,291
+20 utils.LogMiddleware 2019-07-14 01:08:34,307
+20 utils.LogMiddleware 2019-07-14 01:11:19,926
+20 utils.LogMiddleware 2019-07-14 01:11:19,942
+20 utils.LogMiddleware 2019-07-14 01:11:25,846
+20 utils.LogMiddleware 2019-07-14 01:11:25,862
+20 utils.LogMiddleware 2019-07-14 01:12:34,336
+20 utils.LogMiddleware 2019-07-14 01:13:12,781
+20 utils.LogMiddleware 2019-07-14 01:13:12,793
+20 utils.LogMiddleware 2019-07-14 01:13:40,313
+20 utils.LogMiddleware 2019-07-14 01:14:45,248
+20 utils.LogMiddleware 2019-07-14 01:14:45,437
+20 utils.LogMiddleware 2019-07-14 01:14:45,881
+20 utils.LogMiddleware 2019-07-14 01:14:49,648
+20 utils.LogMiddleware 2019-07-14 01:15:20,816
+20 utils.LogMiddleware 2019-07-14 01:17:29,103
+20 utils.LogMiddleware 2019-07-14 01:17:29,204
+20 utils.LogMiddleware 2019-07-14 01:17:30,098
+20 utils.LogMiddleware 2019-07-14 01:19:03,895
+20 utils.LogMiddleware 2019-07-14 01:19:03,916
+20 utils.LogMiddleware 2019-07-14 01:19:05,336
+20 utils.LogMiddleware 2019-07-14 01:19:05,407
+20 utils.LogMiddleware 2019-07-14 01:19:06,211
+20 utils.LogMiddleware 2019-07-14 01:19:06,225
+20 utils.LogMiddleware 2019-07-14 01:20:51,222
+20 utils.LogMiddleware 2019-07-14 01:20:51,233
+20 utils.LogMiddleware 2019-07-14 01:23:08,174
+20 utils.LogMiddleware 2019-07-14 01:23:10,206
+20 utils.LogMiddleware 2019-07-14 01:23:13,777
+20 utils.LogMiddleware 2019-07-14 01:24:17,479
