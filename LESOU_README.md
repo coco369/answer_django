@@ -19,6 +19,9 @@
    
    [登陆记录接口](docs/user/record.md)
    
+   [今日访问量接口](docs/questions/user_visit.md)
+   
+   
 2. 面试题模块
 
    [创建面试题接口](docs/questions/create_questions.md)
