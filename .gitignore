@@ -1,5 +1,7 @@
-.DS_Store
+/answer_django/.DS_Store
 /answer_django/lesou/settings.py
 *.log
 /.idea
 /__pycache__
+/.git
+*migrations
