@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'utils.LogMiddleware.LogMiddleware',
-    'user.UserMiddleware.UserLoginMiddleware',
+    'utils.UserMiddleware.UserLoginMiddleware',
     # 'utils.VisitMiddleware.UserVisitMiddleware',
 ]
 

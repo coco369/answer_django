@@ -130,7 +130,7 @@ class ResetPasswordSerializer(serializers.Serializer):
         # 判断密码和用户密码是否一致
         user = User.objects.filter(username=username).first()
         if not check_password(password, user.password):
-            raise error.ParamError({'code': 1006, 'msg': '原始密码错误，请确认登陆密码是否正确'})
+            raise error.ParamError({'code': 1008, 'msg': '原始密码错误，请确认登陆密码是否正确'})
         # 返回校验的参数
         return attrs
 

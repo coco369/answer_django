@@ -3,7 +3,7 @@ from rest_framework import viewsets, mixins
 from rest_framework.decorators import list_route
 from rest_framework.response import Response
 
-from back.authentications import AuthAuthenticateClass
+from utils.authentications import AuthAuthenticateClass
 from utils import error
 from web.models import Questions
 from back.serializers import BackQuestionsSerializer, QuestionsCreateSerializer, QuestionsUpdateSerializer

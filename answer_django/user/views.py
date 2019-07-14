@@ -7,6 +7,7 @@ from user.models import User, UserLogin
 from user.serializers import UserSerializer, LoginSerializer, RegisterSerializer, ResetPasswordSerializer, \
     UserLoginSerializer
 from utils import error
+from utils.authentications import AuthAuthenticateClass
 
 
 class UserView(viewsets.GenericViewSet,
@@ -49,11 +50,13 @@ class UserView(viewsets.GenericViewSet,
         data = serializer.register_data(serializer.data)
         return Response(data)
 
-    @list_route(methods=['POST'], serializer_class=ResetPasswordSerializer)
+    @list_route(methods=['POST'], serializer_class=ResetPasswordSerializer,
+                authentication_classes=(AuthAuthenticateClass,))
     def reset_password(self, request):
         """
             重置密码
         """
+
         serializer = self.get_serializer(data=request.data)
         result = serializer.is_valid(raise_exception=False)
         if not result:
@@ -67,7 +70,7 @@ class UserView(viewsets.GenericViewSet,
         }
         return Response(res)
 
-    @list_route(methods=['GET'])
+    @list_route(methods=['GET'], authentication_classes=(AuthAuthenticateClass,))
     def record(self, request):
         """
             用户登陆记录
